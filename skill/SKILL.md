@@ -79,11 +79,13 @@ Anthropic updates the metaprompt notebook at:
 To check for updates and apply them:
 
 ```bash
+# From the repo root:
+
 # Check only (exit 0 = up-to-date, exit 2 = update available)
-python ~/incubator/meta-prompt-skill/update-metaprompt.py --check
+python update-metaprompt.py --check
 
 # Check + apply
-python ~/incubator/meta-prompt-skill/update-metaprompt.py
+python update-metaprompt.py
 ```
 
 After running, review changes with `git diff metaprompt.py` and commit if correct.
