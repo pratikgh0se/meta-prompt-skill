@@ -71,6 +71,23 @@ Use `claude-sonnet-4-6` with `temperature=0` for deterministic output. Do NOT us
 4. **Present** — show the generated `<Instructions>` block as the prompt template
 5. **Test (optional)** — offer to run the generated prompt on an example input using `claude-haiku-4-5`
 
+## Keeping the metaprompt current
+
+Anthropic updates the metaprompt notebook at:
+`https://colab.research.google.com/github/anthropics/claude-cookbooks/blob/main/misc/metaprompt.ipynb`
+
+To check for updates and apply them:
+
+```bash
+# Check only (exit 0 = up-to-date, exit 2 = update available)
+python ~/incubator/meta-prompt-skill/update-metaprompt.py --check
+
+# Check + apply
+python ~/incubator/meta-prompt-skill/update-metaprompt.py
+```
+
+After running, review changes with `git diff metaprompt.py` and commit if correct.
+
 ## Common Mistakes
 
 - Using claude-sonnet-5 for generation — it rejects `temperature=0`, use `claude-sonnet-4-6`
